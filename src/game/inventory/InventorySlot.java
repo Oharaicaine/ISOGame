@@ -2,7 +2,7 @@ package game.inventory;
 
 import java.awt.geom.Rectangle2D;
 
-import game.floortile.FloorTile;
+import game.entity.entityObjects.EntityTile;
 import game.graphics.Texture;
 import game.graphics.VertexArray;
 import game.maths.Vector3f;
@@ -17,7 +17,7 @@ public class InventorySlot {
 	
 	protected boolean showSlot;
 	
-	protected FloorTile slotItem;
+	protected EntityTile slotItem;
 	
 	public InventorySlot(Vector3f pos){
 		this.pos = pos;	
@@ -41,11 +41,11 @@ public class InventorySlot {
 		}
 	}
 	
-	public FloorTile getSlotItem() {
+	public EntityTile getSlotItem() {
 		return slotItem;
 	}
 	
-	public void setSlotItem(FloorTile slotItem) {
+	public void setSlotItem(EntityTile slotItem) {
 		this.slotItem = slotItem;
 	}
 	

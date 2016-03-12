@@ -17,11 +17,11 @@ public class MouseHandler {
 	}
 	
 	private Entity clickedEntity(){
-		if(EntityManager.cameraEntities.isEmpty()){
+		if(EntityManager.loadedEntities.isEmpty()){
 			return null;
 		}else{
-			for(Entity entity: EntityManager.cameraEntities){
-				if(entity.getBounds().contains(MouseInput.mousePointWorld)){
+			for(Entity entity: EntityManager.loadedEntities){
+				if(entity.getBounds().contains((float)MouseInput.mousePointWorld.x, (float)MouseInput.mousePointWorld.y)){
 					return entity;
 				}
 			}

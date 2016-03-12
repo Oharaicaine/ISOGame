@@ -2,7 +2,7 @@ package game.gui;
 
 import java.awt.geom.Rectangle2D;
 
-import game.floortile.FloorTile;
+import game.entity.entityObjects.EntityTile;
 import game.graphics.Shader;
 import game.graphics.Texture;
 import game.graphics.VertexArray;
@@ -19,14 +19,14 @@ public class Icons {
 	protected VertexArray mesh;
 	protected Vector3f pos;
 	
-	protected FloorTile building;
+	protected EntityTile building;
 	
 	private Rectangle2D.Float boundingBox;
 	
 	private float size;
 	
 	
-	public Icons(Vector3f pos, FloorTile building, float size){
+	public Icons(Vector3f pos, EntityTile building, float size){
 		this.pos = pos;
 		this.building = building;
 		this.size = size;
@@ -41,7 +41,7 @@ public class Icons {
 		}
 	}
 	
-	public FloorTile getBuilding() {
+	public EntityTile getBuilding() {
 		return building;
 	}
 

@@ -6,7 +6,9 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import game.floortile.FloorTile;
+import game.entity.Entity;
+import game.entity.EntityManager;
+import game.entity.entityObjects.EntityTile;
 import game.input.MouseInput;
 import game.maths.Vector3f;
 import game.world.World;
@@ -26,9 +28,9 @@ public class Utils {
 		return result;
 	}
 	
-	public static FloorTile clickedBlock(){
-		for(FloorTile block : World.cameraMap){
-			if(block.getBounds().contains(MouseInput.mousePointWorld)){
+	public static Entity clickedBlock(){
+		for(Entity block : EntityManager.loadedEntities){
+			if(block.getBounds().contains((float)MouseInput.mousePointWorld.x, (float)MouseInput.mousePointWorld.y)){
 				return block;
 			}
 		}

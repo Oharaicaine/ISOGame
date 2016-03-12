@@ -1,6 +1,7 @@
 package game.inventory;
 
-import game.floortile.FloorTile;
+import game.entity.Entity;
+import game.entity.entityObjects.EntityTile;
 import game.graphics.Shader;
 import game.graphics.Texture;
 import game.graphics.VertexArray;
@@ -11,7 +12,7 @@ import game.utils.Assets;
 
 public class InventoryMouse{
 	
-	public static FloorTile item;
+	public static Entity item;
 	
 	private Vector3f pos;
 	private Texture texture;
@@ -20,7 +21,7 @@ public class InventoryMouse{
 	public InventoryMouse() {
 		pos = new Vector3f((float)MouseInput.mouseScreenX+36, (float)MouseInput.mouseScreenY-32, 0.0f);
 		mesh = Assets.getIconMesh();
-		item = new FloorTile();
+		item = new EntityTile();
 		texture = item.getTexture();
 	}
 	
@@ -46,7 +47,7 @@ public class InventoryMouse{
 		return false;
 	}
 
-	public static FloorTile getItem() {
+	public static Entity getItem() {
 		return item;
 	}
 

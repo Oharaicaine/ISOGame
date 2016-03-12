@@ -1,7 +1,7 @@
 package game.gui;
 
 
-import game.floortile.Building;
+import game.entity.entityObjects.EntityTile;
 import game.graphics.Shader;
 import game.graphics.Texture;
 import game.graphics.VertexArray;
@@ -25,7 +25,7 @@ public class Hud {
 	}
 	
 	private void hudIcons() {
-		hubicon = new Icons(new Vector3f(65, (Main.height/8)/2, 0), new Building(), 64);
+		hubicon = new Icons(new Vector3f(65, (Main.height/8)/2, 0), new EntityTile(), 64);
 		
 	}
 

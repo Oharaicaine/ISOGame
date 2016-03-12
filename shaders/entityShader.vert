@@ -14,7 +14,7 @@ out DATA
 
 void main()
 {
-	gl_Position =  projection_matrix  * view_matrix * camera_matrix * position;
+	gl_Position = projection_matrix  * view_matrix * camera_matrix * position;
 	vs_out.tc = tc;
 }
 

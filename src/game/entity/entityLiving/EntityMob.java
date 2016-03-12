@@ -1,13 +1,12 @@
 package game.entity.entityLiving;
 
 
-import game.entity.Entity;
 import game.graphics.Texture;
 import game.graphics.VertexArray;
 import game.maths.Vector3f;
 import game.utils.Index;
 
-public class EntityMob extends Entity{
+public class EntityMob extends EntityLiving{
 
 	public EntityMob(Vector3f pos, float size) {
 		super(pos, size);
